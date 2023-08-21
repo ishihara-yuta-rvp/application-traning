@@ -16,12 +16,31 @@ class User extends Model
      * @param  mixed $password
      * @return users $user
      */
-    public static function getUserByUserIdAndPassword(string $code, string $password){
+    public static function getUserByUserIdAndPassword(string $code, string $password)
+    {
         $query = self::query()
-        ->where('code', $code)
-        ->where('password', $password)
-        ;
+            ->where('code', $code)
+            ->where('password', $password);
 
         return $query->first();
+    }
+
+    /**
+     * selectOneByCode
+     *
+     * @param  mixed $code
+     * @return users $user
+     */
+    public static function selectOneByCode(string $code)
+    {
+        $query = self::query()
+            ->where('code', $code);
+
+        return $query->first();
+    }
+
+    public static function getAll(){
+
+        return  self::paginate(10);
     }
 }

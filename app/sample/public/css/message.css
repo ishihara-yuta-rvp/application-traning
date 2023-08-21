@@ -1,0 +1,22 @@
+.error {
+    padding: 0.5em 1em;
+    color: #df1313;
+    background: #e4c6c6;
+    border-left: solid 10px #df1313;
+}
+.error p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.success {
+    padding: 0.5em 1em;
+    color: #000000;
+    background: #aaf3a7;
+    border-left: solid 10px #008d1f;
+}
+.success p {
+    margin: 0;
+    padding: 0;
+}
